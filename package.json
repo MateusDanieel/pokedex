@@ -1,0 +1,26 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass src/scss/main.scss public/css/main.css",
+    "sass:watch": "sass --watch src/scss/main.scss:public/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateusDanieel/pokedex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MateusDanieel/pokedex/issues"
+  },
+  "homepage": "https://github.com/MateusDanieel/pokedex#readme",
+  "devDependencies": {
+    "sass": "^1.103.1"
+  }
+}
