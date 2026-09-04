@@ -1,8 +1,9 @@
+@use 'variables' as *;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -10,4 +11,14 @@
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+body {
+    background-color: $bg-dark;
+    font-family: 'Montserrat', sans-serif;
+    color: $white;
+}
+
+img {
+    max-width: 100%;
 }

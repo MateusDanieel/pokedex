@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex</title>
+    <title>Frontend Test | Pokédex</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -11,18 +11,20 @@
 </head>
 <body>
     <header class="sec-header">
-        <div class="container">
-          <h1 class="sec-header__title">Pokédex</h1>
-        </div>
-      </header>
+      <div class="container">
+        <img src="./assets/img/logo.png" alt="Pokémon Logo" class="sec-header__logo" />
+      </div>
+    </header>
     
-      <main>
-        <section class="sec-pokemon-list">
-          <div class="container">
-            <div class="sec-pokemon-list__content"></div>
-          </div>
-        </section>
-      </main>
+    <main>
+      <section class="sec-pokemon-list">
+        <div class="container">
+          <input type="search" class="sec-pokemon-list__search" placeholder="Pesquisar por nome..." autofocus />
+
+          <div class="sec-pokemon-list__content"></div>
+        </div>
+      </section>
+    </main>
 
     <script type="module" src="./src/js/main.js"></script>
 </body>

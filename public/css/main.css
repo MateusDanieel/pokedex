@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -10,6 +9,79 @@
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+body {
+  background-color: #212529;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sec-header__logo {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+}
+
+.sec-pokemon-list__search {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+  outline: none;
+  margin: 0 0 20px;
+  color: #fff;
+}
+.sec-pokemon-list__search:focus {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.sec-pokemon-list__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.sec-pokemon-list__content__card {
+  width: 100%;
+  max-width: 250px;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+.sec-pokemon-list__content__card:hover {
+  border-color: #f85032;
+}
+.sec-pokemon-list__content__card:hover .sec-pokemon-list__content__card__name,
+.sec-pokemon-list__content__card:hover .sec-pokemon-list__content__card__number {
+  color: #f85032;
+}
+.sec-pokemon-list__content__card__number {
+  font-weight: 600;
+}
+.sec-pokemon-list__content__card__image {
+  display: block;
+  margin: 0 auto;
+}
+.sec-pokemon-list__content__card__name {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.sec-pokemon-list__content__card__types {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 8px 0 0;
 }
 
 /*# sourceMappingURL=main.css.map */
