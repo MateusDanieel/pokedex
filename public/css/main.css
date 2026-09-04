@@ -56,7 +56,6 @@ img {
   cursor: pointer;
   border-radius: 4px;
   border: 2px solid transparent;
-  transition: 0.3s;
 }
 .sec-pokemon-list__content__card:hover {
   border-color: #f85032;

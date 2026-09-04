@@ -38,6 +38,16 @@ searchInput.addEventListener('input', (event) => {
 });
 
 function renderPokemonList(pokemonList) {
+   if (!pokemonList.length) {
+    pokemonListElement.innerHTML = `
+      <p class="sec-pokemon-list__empty">
+        Nenhum Pokémon encontrado.
+      </p>
+    `;
+
+    return;
+  }
+  
   pokemonListElement.innerHTML = pokemonList
     .map((pokemon) => createPokemonCard(pokemon))
     .join('');
