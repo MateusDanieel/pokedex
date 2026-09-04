@@ -43,14 +43,12 @@ img {
   border-color: rgba(255, 255, 255, 0.2);
 }
 .sec-pokemon-list__content {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 .sec-pokemon-list__content__card {
   width: 100%;
-  max-width: 250px;
   background-color: rgba(255, 255, 255, 0.02);
   padding: 20px;
   cursor: pointer;
