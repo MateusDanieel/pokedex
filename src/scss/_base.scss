@@ -4,8 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    color: $white;
 }
 
 .container {
@@ -16,7 +14,9 @@
 }
 
 body {
-    background-color: $bgDark;
+    background-color: $bg-dark;
+    font-family: 'Montserrat', sans-serif;
+    color: $white;
 }
 
 img {

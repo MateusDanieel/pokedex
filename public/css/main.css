@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  color: #fff;
 }
 
 .container {
@@ -15,6 +13,8 @@
 
 body {
   background-color: #212529;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
 }
 
 img {
@@ -37,6 +37,7 @@ img {
   border-radius: 4px;
   outline: none;
   margin: 0 0 20px;
+  color: #fff;
 }
 .sec-pokemon-list__search:focus {
   border-color: rgba(255, 255, 255, 0.2);
@@ -49,15 +50,16 @@ img {
 }
 .sec-pokemon-list__content__card {
   width: 100%;
-  max-width: 252.5px;
+  max-width: 250px;
   background-color: rgba(255, 255, 255, 0.02);
   padding: 20px;
   cursor: pointer;
   border-radius: 4px;
-  transition: 0.3s;
+  border: 2px solid transparent;
 }
 .sec-pokemon-list__content__card:hover {
-  background-color: #f85032;
+  border-color: #f85032;
+  transition: 0.3s;
 }
 .sec-pokemon-list__content__card__number {
   font-weight: 600;

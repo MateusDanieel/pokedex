@@ -19,6 +19,7 @@
         border-radius: 4px;
         outline: none;
         margin: 0 0 20px;
+        color: $white;
 
         &:focus {
             border-color: rgba($white, .2);
@@ -33,15 +34,16 @@
 
         &__card {
             width: 100%;
-            max-width: 252.5px;
+            max-width: 250px;
             background-color: rgba($white, .02);
             padding: 20px;
             cursor: pointer;
             border-radius: 4px;
-            transition: .3s;
+            border: 2px solid transparent;
 
             &:hover {
-                background-color: $orange;
+                border-color: $orange;
+                transition: .3s;
             }
 
             &__number {
@@ -60,7 +62,7 @@
             }
 
             &__types {
-                display:inline-block;
+                display: inline-block;
                 background-color: rgba($white, .1);
                 font-size: 12px;
                 padding: 4px 8px;
