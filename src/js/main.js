@@ -5,11 +5,17 @@ import {
 
 const pokemonListElement = document.querySelector('.sec-pokemon-list__content');
 
+const searchInput = document.querySelector(
+  '.sec-pokemon-list__search'
+);
+
+let pokemonList = [];
+
 async function init() {
   try {
     const { results } = await getPokemonList(20);
 
-    const pokemonList = await Promise.all(
+    pokemonList = await Promise.all(
       results.map((pokemon) => getPokemonDetails(pokemon.url))
     );
 
@@ -18,6 +24,18 @@ async function init() {
     console.error(error);
   }
 }
+
+searchInput.addEventListener('input', (event) => {
+  const searchTerm = event.target.value
+    .toLowerCase()
+    .trim();
+
+  const filteredPokemon = pokemonList.filter((pokemon) =>
+    pokemon.name.toLowerCase().includes(searchTerm)
+  );
+
+  renderPokemonList(filteredPokemon);
+});
 
 function renderPokemonList(pokemonList) {
   pokemonListElement.innerHTML = pokemonList
