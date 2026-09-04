@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  color: #fff;
 }
 
 .container {
@@ -10,6 +11,35 @@
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+body {
+  background-color: #212529;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sec-header__logo {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+}
+
+.sec-pokemon-list__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.sec-pokemon-list__content__card {
+  width: 300px;
+  max-width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -47,9 +47,9 @@ function createPokemonCard(pokemon) {
         ${pokemon.name}
       </h2>
 
-      <div class="sec-pokemon-list__content__card__types">
+      <small class="sec-pokemon-list__content__card__types">
         ${types}
-      </div>
+      </small>
     </article>
   `;
 }

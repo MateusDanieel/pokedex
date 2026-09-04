@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+.sec-header {
+    &__logo {
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+.sec-pokemon-list {
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+
+        &__card {
+            width: 300px;
+            max-width: 100%;
+            background-color: rgba($white, .1);
+            padding: 20px;
+        }
+    }
+}
