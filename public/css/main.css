@@ -56,10 +56,14 @@ img {
   cursor: pointer;
   border-radius: 4px;
   border: 2px solid transparent;
+  transition: 0.3s;
 }
 .sec-pokemon-list__content__card:hover {
   border-color: #f85032;
-  transition: 0.3s;
+}
+.sec-pokemon-list__content__card:hover .sec-pokemon-list__content__card__name,
+.sec-pokemon-list__content__card:hover .sec-pokemon-list__content__card__number {
+  color: #f85032;
 }
 .sec-pokemon-list__content__card__number {
   font-weight: 600;
