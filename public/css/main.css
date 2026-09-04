@@ -74,7 +74,7 @@ img {
   text-align: center;
 }
 
-.pokemon-modal {
+.sec-modal {
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -82,15 +82,15 @@ img {
   align-items: center;
   justify-content: center;
 }
-.pokemon-modal[hidden] {
+.sec-modal[hidden] {
   display: none;
 }
-.pokemon-modal__overlay {
+.sec-modal__overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
 }
-.pokemon-modal__content {
+.sec-modal__content {
   position: relative;
   z-index: 1;
   width: calc(100% - 40px);
@@ -99,7 +99,7 @@ img {
   background: #212529;
   border-radius: 8px;
 }
-.pokemon-modal__close {
+.sec-modal__close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -108,15 +108,15 @@ img {
   font-size: 28px;
   cursor: pointer;
 }
-.pokemon-modal__body img {
+.sec-modal__body img {
   display: block;
   max-width: 250px;
   margin: 0 auto;
 }
-.pokemon-modal__body h2 {
+.sec-modal__body h2 {
   text-transform: uppercase;
 }
-.pokemon-modal__arrow {
+.sec-modal__arrow {
   position: relative;
   z-index: 2;
   border: 0;
@@ -125,7 +125,7 @@ img {
   cursor: pointer;
   padding: 20px;
 }
-.pokemon-modal__arrow:hover {
+.sec-modal__arrow:hover {
   color: #f85032;
 }
 

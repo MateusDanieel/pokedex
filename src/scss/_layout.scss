@@ -65,7 +65,7 @@
     }
 }
 
-.pokemon-modal {
+.sec-modal {
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -80,7 +80,7 @@
   &__overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, .7);
+    background: rgba($black, .7);
   }
 
   &__content {
