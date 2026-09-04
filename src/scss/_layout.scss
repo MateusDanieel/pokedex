@@ -10,18 +10,39 @@
 }
 
 .sec-pokemon-list {
+    &__search {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        background-color: transparent;
+        border: 1px solid rgba($white, .02);
+        border-radius: 4px;
+        outline: none;
+        margin: 0 0 20px;
+
+        &:focus {
+            border-color: rgba($white, .2);
+        }
+    }
+
     &__content {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        align-items: flex-start;
+        flex-wrap: wrap;
         gap: 20px;
 
         &__card {
-            width: 300px;
-            max-width: 100%;
-            background-color: rgba($white, .1);
+            width: 100%;
+            max-width: 252.5px;
+            background-color: rgba($white, .02);
             padding: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: .3s;
+
+            &:hover {
+                background-color: $orange;
+            }
         }
     }
 }
