@@ -87,22 +87,22 @@ function renderPokemonModal(pokemon) {
     <h2>${pokemon.name}</h2>
 
     <p>
-      <strong>Tipo:</strong>
+      <strong>Types:</strong>
       ${types}
     </p>
 
     <p>
-      <strong>Altura:</strong>
+      <strong>Height:</strong>
       ${pokemon.height / 10} m
     </p>
 
     <p>
-      <strong>Peso:</strong>
+      <strong>Weight:</strong>
       ${pokemon.weight / 10} kg
     </p>
 
     <p>
-      <strong>Habilidades:</strong>
+      <strong>Abilities:</strong>
       ${abilities}
     </p>
   `;
