@@ -64,9 +64,6 @@ img {
 .sec-pokemon-list__content__card:hover .sec-pokemon-list__content__card__number {
   color: #f85032;
 }
-.sec-pokemon-list__content__card__number {
-  font-weight: 600;
-}
 .sec-pokemon-list__content__card__image {
   display: block;
   margin: 0 auto;
@@ -74,14 +71,66 @@ img {
 .sec-pokemon-list__content__card__name {
   text-transform: uppercase;
   font-size: 20px;
+  text-align: center;
 }
-.sec-pokemon-list__content__card__types {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.1);
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 4px;
-  margin: 8px 0 0;
+
+.pokemon-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pokemon-modal[hidden] {
+  display: none;
+}
+.pokemon-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.pokemon-modal__content {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 40px);
+  max-width: 600px;
+  padding: 30px;
+  background: #212529;
+  border-radius: 8px;
+}
+.pokemon-modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+.pokemon-modal__body img {
+  display: block;
+  max-width: 250px;
+  margin: 0 auto;
+}
+.pokemon-modal__body h2 {
+  text-transform: uppercase;
+}
+.pokemon-modal__arrow {
+  position: relative;
+  z-index: 2;
+  border: 0;
+  background: transparent;
+  font-size: 50px;
+  cursor: pointer;
+  padding: 20px;
+}
+.pokemon-modal__arrow:hover {
+  color: #f85032;
+}
+
+.modal-open {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -26,6 +26,32 @@
       </section>
     </main>
 
+    <div class="pokemon-modal" hidden>
+      <div class="pokemon-modal__overlay"></div>
+      <button
+  class="pokemon-modal__arrow pokemon-modal__arrow--prev"
+  type="button"
+  aria-label="Pokémon anterior"
+>
+  ‹
+</button>
+      <div class="pokemon-modal__content">
+        <button class="pokemon-modal__close" type="button">
+          &times;
+        </button>
+
+        <div class="pokemon-modal__body"></div>
+      </div>
+
+      <button
+  class="pokemon-modal__arrow pokemon-modal__arrow--next"
+  type="button"
+  aria-label="Próximo Pokémon"
+>
+  ›
+</button>
+    </div>
+
     <script type="module" src="./src/js/main.js"></script>
 </body>
 </html>
