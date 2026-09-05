@@ -75,7 +75,7 @@ img {
 .sec-modal {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,45 +86,80 @@ img {
 .sec-modal__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.sec-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 40px;
+  line-height: 1;
+  cursor: pointer;
+}
+.sec-modal__arrow {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 56px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 16px;
 }
 .sec-modal__content {
   position: relative;
   z-index: 1;
-  width: calc(100% - 40px);
-  max-width: 600px;
-  padding: 30px;
-  background: #212529;
+  width: calc(100% - 120px);
+  max-width: 1100px;
+  padding: 60px;
+  background-color: #212529;
   border-radius: 8px;
 }
-.sec-modal__close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  border: 0;
-  background: transparent;
-  font-size: 28px;
-  cursor: pointer;
+.sec-modal__body {
+  display: flex;
+  align-items: center;
+  min-height: 450px;
 }
-.sec-modal__body img {
+.sec-modal__body__info {
+  width: 50%;
+}
+.sec-modal__body__number {
   display: block;
-  max-width: 250px;
-  margin: 0 auto;
+  margin-bottom: 5px;
+  font-size: 18px;
 }
-.sec-modal__body h2 {
+.sec-modal__body__name {
+  margin: 0 0 50px;
+  font-size: 48px;
   text-transform: uppercase;
 }
-.sec-modal__arrow {
-  position: relative;
-  z-index: 2;
-  border: 0;
-  background: transparent;
-  font-size: 50px;
-  cursor: pointer;
-  padding: 20px;
+.sec-modal__body__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
 }
-.sec-modal__arrow:hover {
-  color: #f85032;
+.sec-modal__body__details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.sec-modal__body__details strong {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.sec-modal__body__artwork {
+  width: 50%;
+}
+.sec-modal__body__artwork img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 .modal-open {

@@ -75,36 +75,44 @@ function renderPokemonModal(pokemon) {
     .join(', ');
 
   modalBody.innerHTML = `
-    <img
-      src="${pokemon.sprites.other['official-artwork'].front_default}"
-      alt="${pokemon.name}"
-    >
+    <div class="sec-modal__body__info">
+      <span class="sec-modal__body__number">
+        #${String(pokemon.id).padStart(3, '0')}
+      </span>
 
-    <span>
-      #${String(pokemon.id).padStart(3, '0')}
-    </span>
+      <h2 class="sec-modal__body__name">
+        ${pokemon.name}
+      </h2>
 
-    <h2>${pokemon.name}</h2>
+      <div class="sec-modal__body__details">
+        <div>
+          <strong>Types</strong>
+          <span>${types}</span>
+        </div>
 
-    <p>
-      <strong>Types:</strong>
-      ${types}
-    </p>
+        <div>
+          <strong>Height</strong>
+          <span>${pokemon.height / 10} m</span>
+        </div>
 
-    <p>
-      <strong>Height:</strong>
-      ${pokemon.height / 10} m
-    </p>
+        <div>
+          <strong>Weight</strong>
+          <span>${pokemon.weight / 10} kg</span>
+        </div>
 
-    <p>
-      <strong>Weight:</strong>
-      ${pokemon.weight / 10} kg
-    </p>
+        <div>
+          <strong>Abilities</strong>
+          <span>${abilities}</span>
+        </div>
+      </div>
+    </div>
 
-    <p>
-      <strong>Abilities:</strong>
-      ${abilities}
-    </p>
+    <div class="sec-modal__body__artwork">
+      <img
+        src="${pokemon.sprites.other['official-artwork'].front_default}"
+        alt="${pokemon.name}"
+      >
+    </div>
   `;
 }
 
