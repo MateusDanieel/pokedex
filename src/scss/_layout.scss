@@ -14,6 +14,13 @@
 }
 
 .sec-pokemon-list {
+  &__status {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 16px;
+    color: rgba($white, .7);
+  }
+  
   &__search {
     width: 100%;
     padding: 15px;
@@ -54,7 +61,6 @@
 
     &__card {
       $self: &;
-
       width: 100%;
       background-color: rgba($white, .02);
       padding: 20px;
@@ -162,11 +168,11 @@
       transform: translateY(-50%);
 
       &--prev {
-        left: 15px;
+        left: 20px;
       }
 
       &--next {
-        right: 15px;
+        right: 20px;
       }
     }
   }
