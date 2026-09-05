@@ -14,7 +14,7 @@ export function renderPokemonList(pokemonList) {
   if (!pokemonList.length) {
     pokemonListElement.innerHTML = `
         <p class="sec-pokemon-list__empty">
-          Nenhum Pokémon encontrado.
+          No Pokémon found.
         </p>
       `;
 
