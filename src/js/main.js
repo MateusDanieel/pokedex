@@ -5,7 +5,9 @@ import {
 
 import {
   renderPokemonList,
-  setupSearch
+  setupSearch,
+  showStatus,
+  hideStatus
 } from './ui.js';
 
 import {
@@ -14,6 +16,8 @@ import {
 
 async function init() {
   try {
+    showStatus('Loading...');
+
     const { results } = await getPokemonList(151);
 
     const pokemonList = await Promise.all(
@@ -25,9 +29,11 @@ async function init() {
     renderPokemonList(pokemonList);
 
     setupSearch(pokemonList);
-
     setupPokemonModal(pokemonList);
+
+    hideStatus();
   } catch (error) {
+    showStatus('Unable to load.');
     console.error(error);
   }
 }
