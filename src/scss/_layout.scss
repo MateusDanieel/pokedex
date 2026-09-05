@@ -15,14 +15,14 @@
     padding: 15px;
     font-size: 18px;
     background-color: transparent;
-    border: 1px solid rgba($white, .02);
+    border: 1px solid rgba($white, .1);
     border-radius: 4px;
     outline: none;
     margin: 0 0 20px;
     color: $white;
 
     &:focus {
-      border-color: rgba($white, .2);
+      border-color: rgba($white, .3);
     }
   }
 
@@ -51,12 +51,12 @@
 
       &__image {
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 20px;
       }
 
       &__name {
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 24px;
         text-align: center;
       }
     }

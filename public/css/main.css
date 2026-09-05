@@ -33,14 +33,14 @@ img {
   padding: 15px;
   font-size: 18px;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   outline: none;
   margin: 0 0 20px;
   color: #fff;
 }
 .sec-pokemon-list__search:focus {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 .sec-pokemon-list__content {
   display: grid;
@@ -64,11 +64,11 @@ img {
 }
 .sec-pokemon-list__content__card__image {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 .sec-pokemon-list__content__card__name {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
 }
 
