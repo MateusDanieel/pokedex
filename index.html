@@ -1,31 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Test | Pokédex</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./public/css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Test | Pokédex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./public/css/main.css">
 </head>
+
 <body>
-    <header class="sec-header">
+  <header class="sec-header">
+    <div class="container">
+      <img src="./assets/img/logo.png" alt="Pokémon Logo" class="sec-header__logo" />
+    </div>
+  </header>
+
+  <main>
+    <section class="sec-pokemon-list">
       <div class="container">
-        <img src="./assets/img/logo.png" alt="Pokémon Logo" class="sec-header__logo" />
+        <input type="search" class="sec-pokemon-list__search" placeholder="Search by name (e.g. Pikachu) ..." autofocus />
+
+        <div class="sec-pokemon-list__content"></div>
       </div>
-    </header>
-    
-    <main>
-      <section class="sec-pokemon-list">
-        <div class="container">
-          <input type="search" class="sec-pokemon-list__search" placeholder="Pesquisar por nome..." autofocus />
+    </section>
+  </main>
 
-          <div class="sec-pokemon-list__content"></div>
-        </div>
-      </section>
-    </main>
+  <div class="sec-modal" hidden>
+    <div class="sec-modal__overlay"></div>
+    <button class="sec-modal__arrow sec-modal__arrow--prev" type="button" aria-label="Pokémon anterior">
+      ‹
+    </button>
+    <div class="sec-modal__content">
+      <button class="sec-modal__close" type="button">
+        &times;
+      </button>
 
-    <script type="module" src="./src/js/main.js"></script>
+      <div class="sec-modal__body"></div>
+    </div>
+
+    <button class="sec-modal__arrow sec-modal__arrow--next" type="button" aria-label="Próximo Pokémon">
+      ›
+    </button>
+  </div>
+
+  <script type="module" src="./src/js/main.js"></script>
 </body>
+
 </html>

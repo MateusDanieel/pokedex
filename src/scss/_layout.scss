@@ -1,79 +1,301 @@
 @use 'variables' as *;
 
 .sec-header {
-    &__logo {
-        width: 100%;
-        max-width: 300px;
-        display: block;
-        margin: 20px auto;
+  &__logo {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+
+    @media (max-width: $sm) {
+      max-width: 220px;
     }
+  }
 }
 
 .sec-pokemon-list {
-    &__search {
-        width: 100%;
+  &__search {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid rgba($white, .1);
+    border-radius: 4px;
+    outline: none;
+    margin: 0 0 20px;
+    color: $white;
+
+    &:focus {
+      border-color: rgba($white, .3);
+    }
+
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: $md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    @media (max-width: $sm) {
+      gap: 10px;
+    }
+
+    &__card {
+      $self: &;
+
+      width: 100%;
+      background-color: rgba($white, .02);
+      padding: 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      border: 2px solid transparent;
+
+      &:hover {
+        border-color: $orange;
+
+        #{$self}__name,
+        #{$self}__number {
+          color: $orange;
+        }
+      }
+
+      @media (max-width: $md) {
         padding: 15px;
-        font-size: 18px;
-        background-color: transparent;
-        border: 1px solid rgba($white, .02);
-        border-radius: 4px;
-        outline: none;
-        margin: 0 0 20px;
-        color: $white;
+      }
 
-        &:focus {
-            border-color: rgba($white, .2);
+      @media (max-width: $sm) {
+        padding: 10px;
+      }
+
+      &__image {
+        display: block;
+        margin: 0 auto 20px;
+
+        @media (max-width: $sm) {
+          margin-bottom: 10px;
         }
+      }
+
+      &__name {
+        text-transform: uppercase;
+        font-size: 24px;
+        text-align: center;
+
+        @media (max-width: $md) {
+          font-size: 20px;
+        }
+
+        @media (max-width: $sm) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.sec-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba($black, .75);
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    border: 0;
+    background: none;
+    color: $white;
+    font-size: 40px;
+    line-height: 1;
+    cursor: pointer;
+
+    @media (max-width: $sm) {
+      top: 12px;
+      right: 16px;
+      font-size: 34px;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    border: 0;
+    background: none;
+    color: $white;
+    font-size: 56px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 16px;
+
+    @media (max-width: $sm) {
+      position: absolute;
+      top: 35%;
+      z-index: 2;
+      padding: 10px;
+      font-size: 40px;
+      transform: translateY(-50%);
+
+      &--prev {
+        left: 15px;
+      }
+
+      &--next {
+        right: 15px;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 120px);
+    max-width: 1100px;
+    padding: 60px;
+    background-color: $bg-dark;
+    border-radius: 8px;
+
+    @media (max-width: $lg) {
+      width: calc(100% - 80px);
+      padding: 40px;
     }
 
-    &__content {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+    @media (max-width: $sm) {
+      width: calc(100% - 40px);
+      max-height: calc(100vh - 40px);
+      padding: 50px 20px 25px;
+      overflow-y: auto;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    min-height: 450px;
+
+    @media (max-width: $lg) {
+      min-height: 350px;
+    }
+
+    @media (max-width: $sm) {
+      flex-direction: column-reverse;
+      min-height: auto;
+      gap: 20px;
+    }
+
+    &__info {
+      width: 50%;
+
+      @media (max-width: $sm) {
+        width: 100%;
+      }
+    }
+
+    &__number {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+
+      @media (max-width: $sm) {
+        font-size: 14px;
+      }
+    }
+
+    &__name {
+      margin: 0 0 50px;
+      font-size: 48px;
+      text-transform: uppercase;
+
+      @media (max-width: $lg) {
+        margin-bottom: 30px;
+        font-size: 38px;
+      }
+
+      @media (max-width: $sm) {
+        margin-bottom: 20px;
+        font-size: 28px;
+      }
+    }
+
+    &__details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+
+      @media (max-width: $lg) {
+        gap: 25px;
+      }
+
+      @media (max-width: $sm) {
         gap: 20px;
+      }
 
-        &__card {
-            $self: &;
-            width: 100%;
-            max-width: 250px;
-            background-color: rgba($white, .02);
-            padding: 20px;
-            cursor: pointer;
-            border-radius: 4px;
-            border: 2px solid transparent;
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
 
-            &:hover {
-                border-color: $orange;
-
-                #{$self}__name,
-                #{$self}__number {
-                    color: $orange;
-                }
-            }
-
-            &__number {
-                font-weight: 600;
-            }
-
-            &__image {
-                display: block;
-                margin: 0 auto;
-            }
-
-            &__name {
-                text-transform: uppercase;
-                font-size: 20px;
-                
-            }
-
-            &__types {
-                display: inline-block;
-                background-color: rgba($white, .1);
-                font-size: 12px;
-                padding: 4px 8px;
-                border-radius: 4px;
-                margin: 8px 0 0;
-            }
+        @media (max-width: $sm) {
+          width: calc(50% - 10px);
         }
+      }
+
+      strong {
+        text-transform: uppercase;
+        font-size: 14px;
+      }
     }
+
+    &__artwork {
+      width: 50%;
+
+      @media (max-width: $sm) {
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+
+        @media (max-width: $lg) {
+          max-width: 320px;
+        }
+
+        @media (max-width: $sm) {
+          max-width: 190px;
+        }
+      }
+    }
+  }
+}
+
+.modal-open {
+  overflow: hidden;
 }
