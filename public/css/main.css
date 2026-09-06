@@ -15,10 +15,17 @@ body {
   background-color: #212529;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
   max-width: 100%;
+}
+
+main {
+  flex: 1;
 }
 
 .sec-header__logo {
@@ -127,6 +134,13 @@ img {
   .sec-pokemon-list__content__card__name {
     font-size: 16px;
   }
+}
+
+.sec-footer {
+  padding: 20px 0;
+}
+.sec-footer__copy {
+  text-align: center;
 }
 
 .sec-modal {

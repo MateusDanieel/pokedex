@@ -111,6 +111,14 @@
   }
 }
 
+.sec-footer {
+  padding: 20px 0;
+
+  &__copy {
+    text-align: center;
+  }
+}
+
 .sec-modal {
   position: fixed;
   inset: 0;
