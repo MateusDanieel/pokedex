@@ -15,10 +15,17 @@ body {
   background-color: #212529;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
   max-width: 100%;
+}
+
+main {
+  flex: 1;
 }
 
 .sec-header__logo {
@@ -33,16 +40,13 @@ img {
   }
 }
 
-main {
-  min-height: 100vh;
-}
-main .sec-pokemon-list__status {
+.sec-pokemon-list__status {
   text-align: center;
   padding: 30px 0;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
 }
-main .sec-pokemon-list__search {
+.sec-pokemon-list__search {
   width: 100%;
   padding: 15px;
   font-size: 18px;
@@ -53,36 +57,36 @@ main .sec-pokemon-list__search {
   margin: 0 0 20px;
   color: #fff;
 }
-main .sec-pokemon-list__search:focus {
+.sec-pokemon-list__search:focus {
   border-color: rgba(255, 255, 255, 0.3);
 }
 @media (max-width: 576px) {
-  main .sec-pokemon-list__search {
+  .sec-pokemon-list__search {
     font-size: 16px;
   }
 }
-main .sec-pokemon-list__content {
+.sec-pokemon-list__content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 @media (max-width: 992px) {
-  main .sec-pokemon-list__content {
+  .sec-pokemon-list__content {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 768px) {
-  main .sec-pokemon-list__content {
+  .sec-pokemon-list__content {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 }
 @media (max-width: 576px) {
-  main .sec-pokemon-list__content {
+  .sec-pokemon-list__content {
     gap: 10px;
   }
 }
-main .sec-pokemon-list__content__card {
+.sec-pokemon-list__content__card {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.02);
   padding: 20px;
@@ -90,44 +94,44 @@ main .sec-pokemon-list__content__card {
   border-radius: 4px;
   border: 2px solid transparent;
 }
-main .sec-pokemon-list__content__card:hover {
+.sec-pokemon-list__content__card:hover {
   border-color: #f85032;
 }
-main .sec-pokemon-list__content__card:hover main .sec-pokemon-list__content__card__name,
-main .sec-pokemon-list__content__card:hover main .sec-pokemon-list__content__card__number {
+.sec-pokemon-list__content__card:hover .sec-pokemon-list__content__card__name,
+.sec-pokemon-list__content__card:hover .sec-pokemon-list__content__card__number {
   color: #f85032;
 }
 @media (max-width: 768px) {
-  main .sec-pokemon-list__content__card {
+  .sec-pokemon-list__content__card {
     padding: 15px;
   }
 }
 @media (max-width: 576px) {
-  main .sec-pokemon-list__content__card {
+  .sec-pokemon-list__content__card {
     padding: 10px;
   }
 }
-main .sec-pokemon-list__content__card__image {
+.sec-pokemon-list__content__card__image {
   display: block;
   margin: 0 auto 20px;
 }
 @media (max-width: 576px) {
-  main .sec-pokemon-list__content__card__image {
+  .sec-pokemon-list__content__card__image {
     margin-bottom: 10px;
   }
 }
-main .sec-pokemon-list__content__card__name {
+.sec-pokemon-list__content__card__name {
   text-transform: uppercase;
   font-size: 24px;
   text-align: center;
 }
 @media (max-width: 768px) {
-  main .sec-pokemon-list__content__card__name {
+  .sec-pokemon-list__content__card__name {
     font-size: 20px;
   }
 }
 @media (max-width: 576px) {
-  main .sec-pokemon-list__content__card__name {
+  .sec-pokemon-list__content__card__name {
     font-size: 16px;
   }
 }
